@@ -1,8 +1,10 @@
 import React from 'react';
-import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Container, Nav, Navbar, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import useAuth from '../../Hooks/useAuth';
 
 const Header = () => {
+     const { user, logOut } = useAuth();
      return (
           <div>
                <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
@@ -16,10 +18,12 @@ const Header = () => {
 
                               </Nav>
                               <Nav className="d-flex justify-content-center algin-items-center">
-                                   <Nav.Link as={Link} to="/login">Login</Nav.Link>
-                                   <Navbar.Text className="ms-3">
-                                        Signed in as:<Link to=""> Mark Otto</Link>
-                                   </Navbar.Text>
+
+
+                                   {user.email && <Navbar.Text className="me-3 ">
+                                        Signed in as:<Link to="">{user.displayName}</Link>
+                                   </Navbar.Text>}
+                                   {user.email ? <Button onClick={logOut}>Log Out</Button> : <Nav.Link as={Link} to="/login">Login</Nav.Link>}
                               </Nav>
                          </Navbar.Collapse>
                     </Container>

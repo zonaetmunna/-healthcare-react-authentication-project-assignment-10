@@ -1,15 +1,14 @@
-import React from 'react';
-import { Col, Form, Button, Row } from 'react-bootstrap';
+import React, { createContext } from 'react';
+import { Col, Form, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAuth from '../../../../Hooks/useAuth';
 
-const Login = () => {
-     const { signInWithGoogle, handleSubmit, getEmail,
-          getPassword } = useAuth();
+const Register = () => {
+     const { createUserAccount, handleSubmit, getEmail, getPassword } = useAuth();
      return (
           <div>
                <Form className="mx-auto w-50 mt-5 p-3">
-                    <h3> Login</h3>
+                    <h3> Register</h3>
                     <Form.Group as={Row} className="mb-3" controlId="formHorizontalEmail">
 
                          <Col sm={10}>
@@ -26,21 +25,19 @@ const Login = () => {
                     <Form.Group as={Row} className="mb-3">
 
                          <Col sm={10}>
-                              <Form.Control onSubmit={handleSubmit} type="submit" Value="sign in" />
+                              <Form.Control onSubmit={createUserAccount} type="submit" Value="Create Account" />
                          </Col>
                     </Form.Group>
                </Form>
                <Row>
 
                     <Col md={6} className="mx-auto w-50 ps-4 ">
-                         <p>New user <Link to="/register">Register</Link></p>
-                         <Button onClick={signInWithGoogle} variant="primary">Google sign in</Button>
+                         <p>already sign in <Link to="/login">Login</Link></p>
+
                     </Col>
                </Row>
-
-
           </div>
      );
 };
 
-export default Login;
+export default Register;
