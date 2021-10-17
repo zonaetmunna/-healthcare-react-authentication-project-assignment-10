@@ -15,6 +15,9 @@ function App() {
           <Route exact path="/">
             <Home></Home>
           </Route>
+          <Route path="/home">
+            <Home></Home>
+          </Route>
         </Switch>
         <Footer></Footer>
       </BrowserRouter>
