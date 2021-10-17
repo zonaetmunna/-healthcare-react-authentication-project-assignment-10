@@ -22,6 +22,7 @@ const Details = () => {
                                    <Card.Body>
                                         <Card.Title>{details.name}</Card.Title>
                                         <Card.Text>{details.description}</Card.Text>
+
                                         <Button onClick={handleBooking} variant="success">Book Appointment</Button>
                                    </Card.Body>
 

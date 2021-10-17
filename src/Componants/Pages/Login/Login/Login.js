@@ -1,11 +1,21 @@
 import React from 'react';
 import { Col, Form, Button, Row } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useHistory, useLocation } from 'react-router-dom';
 import useAuth from '../../../../Hooks/useAuth';
 
 const Login = () => {
      const { signInWithGoogle, handleSubmit, getEmail,
           getPassword } = useAuth();
+     const history = useHistory();
+     const location = useLocation();
+
+     const redirect_url = location.state?.from || '/home';
+     const handleGoogleSign = () => {
+          signInWithGoogle()
+               .then(result => {
+                    history.push(redirect_url)
+               })
+     }
      return (
           <div>
                <Form className="mx-auto w-50 mt-5 p-3">
@@ -34,7 +44,7 @@ const Login = () => {
 
                     <Col md={6} className="mx-auto w-50 ps-4 ">
                          <p>New user <Link to="/register">Register</Link></p>
-                         <Button onClick={signInWithGoogle} variant="primary">Google sign in</Button>
+                         <Button onClick={handleGoogleSign} variant="primary">Google sign in</Button>
                     </Col>
                </Row>
 
