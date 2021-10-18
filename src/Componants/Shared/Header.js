@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Nav, Navbar, Button } from 'react-bootstrap';
+import { Container, Nav, Navbar, Button, Image } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
 
@@ -23,6 +23,7 @@ const Header = () => {
                                    {user.email && <Navbar.Text className="me-3 ">
                                         Signed in as:<Link to="">{user.displayName}</Link>
                                    </Navbar.Text>}
+
                                    {user.email ? <Button onClick={logOut} className="fw-bold">Log Out</Button> : <Nav.Link as={Link} to="/login" className="fw-bold">Login</Nav.Link>}
                               </Nav>
                          </Navbar.Collapse>
