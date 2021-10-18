@@ -50,11 +50,11 @@ const Login = () => {
                </Form>
                <Row>
 
-                    <Col md={6} className="mx-auto w-50 ps-4 ">
+                    <Col sm={12} md={6} className="mx-auto w-50 ps-4 text-center ">
+                         <p>or login with</p>
+                         <Button onClick={handleGoogleSign} variant="primary" className="me-2"><i class="fab fa-google"></i> Google sign in</Button>
 
-                         <Button onClick={handleGoogleSign} variant="primary" className="mb-2">Google sign in</Button>
-                         <br />
-                         <Button onClick={handleGithubSign} variant="primary">Github Sign in</Button>
+                         <Button onClick={handleGithubSign} variant="primary"><i class="fab fa-github"></i> Github Sign in</Button>
                     </Col>
                </Row>
 

@@ -9,7 +9,7 @@ const Footer = () => {
                     <Row className="g-4 ">
                          <Col sm={12} md={4} className="p-3">
                               <h4 className="text-primary">medical and heath center</h4>
-                              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae voluptates quasi aperiam nesciunt illum totam consectetur, harum ad. Illum eum delectus voluptates deleniti dicta quisquam assumenda accusantium reprehenderit repudiandae vero.</p>
+                              <p>Our team of highly trained professionals uses the latest healing technologies to restore you to pain-free health quickly and easily. We thoroughly evaluate & treat all of the contributing root factors related to your issue.</p>
                          </Col>
                          <Col sm={12} md={4} className="p-3">
                               <h4 className="text-primary">Contact Details</h4>
