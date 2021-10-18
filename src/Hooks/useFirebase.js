@@ -87,6 +87,10 @@ const useFirebase = () => {
                .then(result => {
                     setUser(result.user)
                     console.log(result.user);
+                    setError('')
+               })
+               .catch(error => {
+                    setError(error.message)
                })
      }
 
@@ -95,6 +99,10 @@ const useFirebase = () => {
                .then(result => {
                     setUser(result.user)
                     console.log(result.user);
+                    setError('')
+               })
+               .catch(error => {
+                    setError(error.message)
                })
      }
 
@@ -110,7 +118,7 @@ const useFirebase = () => {
           handleSubmit,
           getEmail,
           getPassword,
-          createUserAccount
+          error
 
 
      }

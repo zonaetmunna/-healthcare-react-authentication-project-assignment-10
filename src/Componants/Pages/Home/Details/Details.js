@@ -16,9 +16,9 @@ const Details = () => {
 
                <Container className="m-5 p-5">
                     <Row>
-                         <Col sm={6} md={6}>
+                         <Col sm={12} md={6}>
                               <Card className="border-0">
-                                   <Card.Img variant="top" src={details.image} />
+                                   <Card.Img variant="top" className="img-fluid" src={details.image} />
                                    <Card.Body>
                                         <Card.Title>{details.name}</Card.Title>
                                         <Card.Text>{details.description}</Card.Text>

@@ -5,7 +5,7 @@ import useAuth from '../../../../Hooks/useAuth';
 
 const Login = () => {
      const { signInWithGoogle, handleSubmit, getEmail,
-          getPassword, signInWithGithub, isLogin, toggleLogin } = useAuth();
+          getPassword, signInWithGithub, isLogin, toggleLogin, error } = useAuth();
      // history and location
      const history = useHistory();
      const location = useLocation();
@@ -46,6 +46,7 @@ const Login = () => {
                               <Form.Check onChange={toggleLogin} label="Already have account" />
                          </Col>
                     </Form.Group>
+                    <p>{error}</p>
                     <Button variant="primary" type="submit"> {isLogin ? "Login" : " Submit"}  </Button>
                </Form>
                <Row>
