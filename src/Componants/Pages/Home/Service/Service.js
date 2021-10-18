@@ -14,7 +14,7 @@ const Service = ({ service }) => {
 
      return (
           <div>
-               <Col>
+               <Col className="shadow-lg">
                     <Card>
                          <Card.Img variant="top" src={image} fluid className="" width="250" height="250" />
                          <Card.Body>

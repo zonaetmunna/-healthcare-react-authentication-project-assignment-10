@@ -13,11 +13,11 @@ const Details = () => {
      }
      return (
           <div>
-               <h1>{id}</h1>
-               <Container>
+
+               <Container className="m-5 p-5">
                     <Row>
                          <Col sm={6} md={6}>
-                              <Card>
+                              <Card className="border-0">
                                    <Card.Img variant="top" src={details.image} />
                                    <Card.Body>
                                         <Card.Title>{details.name}</Card.Title>

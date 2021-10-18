@@ -6,8 +6,9 @@ import Medicines from '../Medicines/Medicines';
 const Medicine = () => {
      const [medicine] = useMedicine();
      return (
-          <div>
-               <Row xs={1} md={2} className="g-4">
+          <div className="mt-5 p-5">
+               <h3 className="text-center text-primary">Medicine store</h3>
+               <Row xs={1} md={3} className="g-4">
                     {
                          medicine.map(medicines => <Medicines
                               key={medicines.id}

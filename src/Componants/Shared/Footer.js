@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
      return (
-          <div className="mt-5">
-               <Container className="bg-dark text-white  ">
+          <div className="bg-dark text-white text-center mt-5 ">
+               <Container className="">
                     <Row className="g-4 ">
                          <Col sm={12} md={4} className="p-3">
                               <h4 className="text-primary">medical and heath center</h4>

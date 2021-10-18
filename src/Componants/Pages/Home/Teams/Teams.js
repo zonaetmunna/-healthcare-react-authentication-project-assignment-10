@@ -10,7 +10,7 @@ const Teams = () => {
 
      return (
 
-          <div className="mt-5">
+          <div className="mt-5 p-4">
                <div className="text-center">
                     <h3>Meet Our Team</h3>
                     <p className="">Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo non habent claritatem insitamconsequat duis autem  </p>

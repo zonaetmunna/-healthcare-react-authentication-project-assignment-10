@@ -6,16 +6,16 @@ import useAuth from '../../Hooks/useAuth';
 const Header = () => {
      const { user, logOut } = useAuth();
      return (
-          <div>
+          <div className="">
                <Navbar collapseOnSelect expand="lg" bg="light" variant="light " fixed="top" >
                     <Container>
-                         <Navbar.Brand as={Link} to="/home">Medical & Health center</Navbar.Brand>
+                         <Navbar.Brand as={Link} to="/home" className="text-primary">Medical & Health center</Navbar.Brand>
                          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                          <Navbar.Collapse id="responsive-navbar-nav">
-                              <Nav className="me-auto">
-                                   <Nav.Link as={Link} to="/home">Home</Nav.Link>
-                                   <Nav.Link as={Link} to="/news">News</Nav.Link>
-                                   <Nav.Link as={Link} to="/medicine">Medicine</Nav.Link>
+                              <Nav className="mx-auto">
+                                   <Nav.Link as={Link} to="/home" className="fw-bold">Home</Nav.Link>
+                                   <Nav.Link as={Link} to="/news" className="fw-bold">News</Nav.Link>
+                                   <Nav.Link as={Link} to="/medicine" className="fw-bold">Medicine</Nav.Link>
                               </Nav>
                               <Nav className="d-flex justify-content-center algin-items-center">
 
@@ -23,7 +23,7 @@ const Header = () => {
                                    {user.email && <Navbar.Text className="me-3 ">
                                         Signed in as:<Link to="">{user.displayName}</Link>
                                    </Navbar.Text>}
-                                   {user.email ? <Button onClick={logOut}>Log Out</Button> : <Nav.Link as={Link} to="/login">Login</Nav.Link>}
+                                   {user.email ? <Button onClick={logOut} className="fw-bold">Log Out</Button> : <Nav.Link as={Link} to="/login" className="fw-bold">Login</Nav.Link>}
                               </Nav>
                          </Navbar.Collapse>
                     </Container>

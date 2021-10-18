@@ -1,5 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import 'animate.css';
+
 
 import './App.css';
 import Booking from './Componants/Pages/Home/Booking/Booking';

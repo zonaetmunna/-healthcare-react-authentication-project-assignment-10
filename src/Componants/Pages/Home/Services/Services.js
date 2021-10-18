@@ -8,7 +8,7 @@ const Services = () => {
      return (
           <div className="mt-5">
                <Container>
-                    <h1>Medical Services</h1>
+                    <h2 className="mb-3 animate__backInDown">Medical Services</h2>
                     <Row xs={1} md={3} className="g-3 ">
                          {
                               services.slice(0, 6).map(service => <Service
