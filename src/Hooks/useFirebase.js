@@ -1,4 +1,4 @@
-import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged, signInWithEmailAndPassword, createUserWithEmailAndPassword, GithubAuthProvider } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged, signInWithEmailAndPassword, createUserWithEmailAndPassword, GithubAuthProvider, updateProfile } from "firebase/auth";
 import { useEffect, useState } from "react";
 import initializeAuthentication from "../Componants/Pages/Login/Firebase/Firebase.init";
 initializeAuthentication();
@@ -6,13 +6,15 @@ initializeAuthentication();
 
 
 const useFirebase = () => {
+     // google sign in state
      const [user, setUser] = useState({})
      const [isLoading, setIsLoading] = useState(true);
-
+     // email and password signup state
      const [email, setEmail] = useState('')
      const [password, setpassword] = useState('')
      const [error, setError] = useState('')
      const [isLogin, setIsLogin] = useState(false);
+     const [userName, setUserName] = useState('')
 
      const auth = getAuth();
      const googleProvider = new GoogleAuthProvider();
@@ -60,6 +62,10 @@ const useFirebase = () => {
           setIsLogin(e.target.checked);
           console.log(e.target.checked);
      }
+     // ueser
+     const getUserName = (e) => {
+          setUserName(e.target.value)
+     }
      // email
      const getEmail = (e) => {
           setEmail(e.target.value);
@@ -100,11 +106,22 @@ const useFirebase = () => {
                     setUser(result.user)
                     console.log(result.user);
                     setError('')
+                    handleUser();
                })
                .catch(error => {
                     setError(error.message)
                })
      }
+
+     // userhandle
+     const handleUser = () => {
+          updateProfile(auth.currentUser, { displayName: userName })
+               .then(() => {
+
+               })
+
+     }
+
 
      return {
           signInWithGoogle,
@@ -118,6 +135,8 @@ const useFirebase = () => {
           handleSubmit,
           getEmail,
           getPassword,
+
+          getUserName,
           error
 
 

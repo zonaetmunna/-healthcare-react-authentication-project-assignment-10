@@ -5,7 +5,7 @@ import useAuth from '../../../../Hooks/useAuth';
 
 const Login = () => {
      const { signInWithGoogle, handleSubmit, getEmail,
-          getPassword, signInWithGithub, isLogin, toggleLogin, error } = useAuth();
+          getPassword, signInWithGithub, isLogin, toggleLogin, error, getUserName } = useAuth();
      // history and location
      const history = useHistory();
      const location = useLocation();
@@ -28,6 +28,12 @@ const Login = () => {
           <div className="p-5">
                <Form className="mx-auto w-50 mt-5 p-3" onSubmit={handleSubmit}>
                     <h3 className="text-center"> {isLogin ? "Login" : "Register"}</h3>
+                    <Form.Group as={Row} className="mb-3" controlId="formHorizontalText">
+
+                         <Col sm={10}>
+                              <Form.Control onBlur={getUserName} type="text" placeholder="User" />
+                         </Col>
+                    </Form.Group>
                     <Form.Group as={Row} className="mb-3" controlId="formHorizontalEmail">
 
                          <Col sm={10}>
