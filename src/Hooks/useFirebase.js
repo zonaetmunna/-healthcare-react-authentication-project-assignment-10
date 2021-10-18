@@ -50,9 +50,11 @@ const useFirebase = () => {
 
      const getEmail = (e) => {
           setEmail(e.target.value);
+          console.log(e.target.value);
      }
      const getPassword = (e) => {
-          setpassword(e.target.value)
+          setpassword(e.target.value);
+          console.log(e.target.value);
      }
 
      const handleSubmit = (e) => {
@@ -69,6 +71,7 @@ const useFirebase = () => {
           signInWithEmailAndPassword(auth, email, password)
                .then(result => {
                     setUser(result.user)
+                    console.log(result.user);
                })
      }
 
@@ -76,6 +79,7 @@ const useFirebase = () => {
           createUserWithEmailAndPassword(auth, email, password)
                .then(result => {
                     setUser(result.user)
+                    console.log(result.user);
                })
      }
 

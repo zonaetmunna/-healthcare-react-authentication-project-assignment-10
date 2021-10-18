@@ -16,6 +16,7 @@ const Login = () => {
                     history.push(redirect_url)
                })
      }
+
      return (
           <div>
                <Form className="mx-auto w-50 mt-5 p-3">
