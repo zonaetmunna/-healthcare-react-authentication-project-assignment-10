@@ -1,5 +1,5 @@
 import React from 'react';
-import { Col, Container, Row, Button } from 'react-bootstrap';
+import { Col, Container, Row, Button, Image } from 'react-bootstrap';
 import backgroundImage from '../../../../imgaes/banner.jpg'
 
 const Banner = () => {
@@ -12,13 +12,16 @@ const Banner = () => {
 
      }
      return (
-          <div style={styles} className="p-3 m-2">
-               <Container>
-                    <Row>
-                         <Col sm={6} md={6} className="">
+          <div style={styles} className="p-3 ">
+               <Container >
+                    <Row className="d-flex   align-items-center mt-5">
+                         <Col sm={6} md={6}  >
                               <h1>On a Pursuit of Better Medicine</h1>
-                              <p>The requested records directly to fuctional qualified doctors the day before or the day of the appointment Podcasting operational change management inside of workflows to establish a framework. Taking seamless the long tai</p>
+                              <p>The requested records directly to functional qualified doctors the day before or the day of the appointment Podcasting operational change management inside of workflows to establish a framework. Taking seamless the long tai</p>
                               <Button variant="success">Book Appointment</Button>
+                         </Col>
+                         <Col sm={6} md={6} className="">
+
                          </Col>
                     </Row>
                </Container>

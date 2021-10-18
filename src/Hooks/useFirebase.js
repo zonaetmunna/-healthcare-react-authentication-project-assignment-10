@@ -1,4 +1,4 @@
-import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged, signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged, signInWithEmailAndPassword, createUserWithEmailAndPassword, GithubAuthProvider } from "firebase/auth";
 import { useEffect, useState } from "react";
 import initializeAuthentication from "../Componants/Pages/Login/Firebase/Firebase.init";
 initializeAuthentication();
@@ -12,9 +12,11 @@ const useFirebase = () => {
      const [email, setEmail] = useState('')
      const [password, setpassword] = useState('')
      const [error, setError] = useState('')
+     const [isLogin, setIsLogin] = useState(false);
 
      const auth = getAuth();
      const googleProvider = new GoogleAuthProvider();
+     const githubProvider = new GithubAuthProvider();
 
      // google sign in
      const signInWithGoogle = () => {
@@ -48,23 +50,36 @@ const useFirebase = () => {
           return () => unsubscribed;
      }, [])
 
+     // Github sign in
+     const signInWithGithub = () => {
+          return signInWithPopup(auth, githubProvider)
+
+     }
+     // login email and password based
+     const toggleLogin = (e) => {
+          setIsLogin(e.target.checked);
+          console.log(e.target.checked);
+     }
+     // email
      const getEmail = (e) => {
           setEmail(e.target.value);
           console.log(e.target.value);
      }
+     // password
      const getPassword = (e) => {
           setpassword(e.target.value);
           console.log(e.target.value);
      }
-
+     // submit
      const handleSubmit = (e) => {
           e.preventDefault();
           if (password.length < 6) {
                setError("at lest 6 digit");
                return;
           }
-          signInUserAccount(email, password);
-          createUserAccount(email, password)
+          isLogin ? signInUserAccount(email, password) : createUserAccount(email, password);
+
+
      }
 
      const signInUserAccount = (email, password) => {
@@ -88,7 +103,10 @@ const useFirebase = () => {
           user,
           logOut,
           isLoading,
+          signInWithGithub,
 
+          toggleLogin,
+          isLogin,
           handleSubmit,
           getEmail,
           getPassword,

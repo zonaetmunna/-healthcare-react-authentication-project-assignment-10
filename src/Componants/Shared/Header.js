@@ -7,15 +7,15 @@ const Header = () => {
      const { user, logOut } = useAuth();
      return (
           <div>
-               <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
+               <Navbar collapseOnSelect expand="lg" bg="light" variant="light " fixed="top" >
                     <Container>
-                         <Navbar.Brand href="#home">Medical & Health center</Navbar.Brand>
+                         <Navbar.Brand as={Link} to="/home">Medical & Health center</Navbar.Brand>
                          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                          <Navbar.Collapse id="responsive-navbar-nav">
                               <Nav className="me-auto">
                                    <Nav.Link as={Link} to="/home">Home</Nav.Link>
-
-
+                                   <Nav.Link as={Link} to="/news">News</Nav.Link>
+                                   <Nav.Link as={Link} to="/medicine">Medicine</Nav.Link>
                               </Nav>
                               <Nav className="d-flex justify-content-center algin-items-center">
 

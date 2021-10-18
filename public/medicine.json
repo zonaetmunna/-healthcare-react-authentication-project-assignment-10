@@ -1,0 +1,44 @@
+[
+     {
+          "id": 1,
+          "name": "Betamin 100mg Tab X 100",
+          "price": 120,
+          "image": "https://i.ibb.co/pyQ4NvX/1.jpg"
+     },
+     {
+          "id": 2,
+          "name": "Betamin 100mg Tab X 800",
+          "price": 120,
+          "image": "https://i.ibb.co/3MK6JCp/2.jpg "
+     },
+     {
+          "id": 3,
+          "name": "Betamin 100mg Tab X 800",
+          "price": 120,
+          "image": "https://i.ibb.co/Z8yRCs8/3.jpg"
+     },
+     {
+          "id": 4,
+          "name": "Betamin 100mg Tab X 800",
+          "price": 120,
+          "image": "https://i.ibb.co/6vsLy9N/4.jpg"
+     },
+     {
+          "id": 5,
+          "name": "Betamin 100mg Tab X 800",
+          "price": 120,
+          "image": "https://i.ibb.co/pyQ4NvX/1.jpg "
+     },
+     {
+          "id": 6,
+          "name": "Betamin 100mg Tab X 800",
+          "price": 120,
+          "image": "https://i.ibb.co/3rDkDx8/7.jpg "
+     },
+     {
+          "id": 7,
+          "name": "Betamin 100mg Tab X 800",
+          "price": 120,
+          "image": "https://i.ibb.co/5v99W4v/8.jpg  "
+     }
+]

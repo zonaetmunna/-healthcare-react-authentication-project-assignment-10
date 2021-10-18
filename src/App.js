@@ -6,7 +6,9 @@ import Booking from './Componants/Pages/Home/Booking/Booking';
 import Details from './Componants/Pages/Home/Details/Details';
 import Home from './Componants/Pages/Home/Home/Home';
 import Login from './Componants/Pages/Login/Login/Login';
-import Register from './Componants/Pages/Login/Register/Register';
+
+import Medicine from './Componants/Pages/Medicine/Medicine';
+import News from './Componants/Pages/News/News';
 import NotPound from './Componants/Pages/NotPound/NotPound';
 import PrivateRoute from './Componants/Pages/PrivateRoute/PrivateRoute';
 import Footer from './Componants/Shared/Footer';
@@ -32,11 +34,15 @@ function App() {
             <Route path="/login">
               <Login></Login>
             </Route>
-            <Route path="/register">
-              <Register></Register>
-            </Route>
+
             <PrivateRoute path="/booking">
               <Booking></Booking>
+            </PrivateRoute>
+            <Route path="/news">
+              <News></News>
+            </Route>
+            <PrivateRoute path="/medicine">
+              <Medicine></Medicine>
             </PrivateRoute>
             <Route path="*">
               <NotPound></NotPound>
