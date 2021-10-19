@@ -1,7 +1,7 @@
 import React from 'react';
 import { Row } from 'react-bootstrap';
 import useMember from '../../../../Hooks/useMember';
-import useService from '../../../../Hooks/useService';
+
 import Team from '../Team/Team';
 
 

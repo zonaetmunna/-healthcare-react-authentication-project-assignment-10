@@ -8,8 +8,10 @@ const Service = ({ service }) => {
 
 
      const url = `/details/${id}`
+
      const handleDetailsClick = () => {
           history.push(url)
+          console.log(url)
      }
 
      return (

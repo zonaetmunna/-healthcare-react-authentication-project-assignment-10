@@ -23,18 +23,10 @@ const Login = () => {
                     history.push(redirect_url)
                })
      }
-     const handleEmailPasswordSubmit = () => {
-          handleSubmit()
-               .then(result => {
-                    history.push(redirect_url)
-               })
-     }
-
-
 
      return (
           <div className="p-5">
-               <Form className="mx-auto w-50 mt-5 p-3" onSubmit={handleEmailPasswordSubmit}>
+               <Form className="mx-auto w-50 mt-5 p-3" onSubmit={handleSubmit}>
                     <h3 className="text-center"> {isLogin ? "Login" : "Register"}</h3>
                     <Form.Group as={Row} className="mb-3" controlId="formHorizontalText">
 
