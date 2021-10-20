@@ -37,7 +37,7 @@ const useFirebase = () => {
                })
                .finally(() => setIsLoading(false))
      }
-
+     // especial observation
      useEffect(() => {
           setIsLoading(true)
           const unsubscribed = onAuthStateChanged(auth, user => {
@@ -62,7 +62,7 @@ const useFirebase = () => {
           setIsLogin(e.target.checked);
           console.log(e.target.checked);
      }
-     // ueser
+     // user name
      const getUserName = (e) => {
           setUserName(e.target.value)
      }
@@ -76,7 +76,7 @@ const useFirebase = () => {
           setpassword(e.target.value);
           console.log(e.target.value);
      }
-     // submit
+     //login or register submit
      const handleSubmit = (e) => {
           e.preventDefault();
           if (password.length < 6) {
@@ -113,7 +113,7 @@ const useFirebase = () => {
                })
      }
 
-     // userhandle
+     // user name Handle
      const handleUser = () => {
           updateProfile(auth.currentUser, { displayName: userName })
                .then(() => {
