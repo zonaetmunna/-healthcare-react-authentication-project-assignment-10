@@ -18,9 +18,6 @@ const Details = () => {
 
      return (
           <div className="mt-5 pt-5">
-
-
-
                <Container className="m-5 p-5">
                     <h1>{id}</h1>
                     <Row>

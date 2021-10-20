@@ -8,12 +8,16 @@ import Team from '../Team/Team';
 
 const Teams = () => {
      const [member] = useMember();
+
+     const styles = {
+          fontFamily: 'Roboto Mono'
+     }
      return (
 
-          <div className="mt-5 p-4">
+          <div style={styles} className="mt-5 p-4">
                <div className="text-center">
                     <h3>Meet Our Team</h3>
-                    <p className="">Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo non habent claritatem insitamconsequat duis autem  </p>
+                    <p className="ps-3 pe-3">Thanks to decades of experience and research, we know what works for chronically homeless people: robust services that begin with a “Housing First” approach: providing housing as a first step and then surrounding tenants with voluntary treatment and health services. </p>
                </div>
 
                <Row xs={1} md={4} className="g-4">
