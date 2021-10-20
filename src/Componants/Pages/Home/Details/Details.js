@@ -32,12 +32,11 @@ const Details = () => {
      }
 
      return (
-          <div className="mt-5 pt-5">
+          <div className="mt-5">
 
-               <Container className="m-5 p-5">
-
+               <Container className="m-3 p-3 w-75 mx-auto bg-light">
                     <Row>
-                         <Col sm={12} md={6}>
+                         <Col sm={12} md={12} className="shadow">
                               <Card className="border-0">
                                    <Card.Img variant="top" className="img-fluid" src={singleDetails?.image} />
                                    <Card.Body>

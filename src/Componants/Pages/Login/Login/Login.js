@@ -32,19 +32,19 @@ const Login = () => {
                          <h3 className="text-center"> {isLogin ? "Login" : "Register"}</h3>
                          {/* user name */}
                          <Form.Group as={Row} className="mb-3" controlId="formHorizontalText">
-                              <Col sm={10}>
+                              <Col sm={10} md={10}>
                                    <Form.Control onBlur={getUserName} type="text" placeholder="User" />
                               </Col>
                          </Form.Group>
                          {/* user email */}
                          <Form.Group as={Row} className="mb-3" controlId="formHorizontalEmail">
-                              <Col sm={10}>
+                              <Col sm={12} md={10}>
                                    <Form.Control onBlur={getEmail} type="email" placeholder="Email" />
                               </Col>
                          </Form.Group>
                          {/* user password */}
                          <Form.Group as={Row} className="mb-3" controlId="formHorizontalPassword">
-                              <Col sm={10}>
+                              <Col sm={10} md={10}>
                                    <Form.Control onBlur={getPassword} type="password" placeholder="Password" />
                               </Col>
                          </Form.Group>
@@ -63,8 +63,8 @@ const Login = () => {
                     <Row>
                          <Col sm={12} md={6} className="mx-auto w-50 ps-4 text-center ">
                               <p>or login with</p>
-                              <Button onClick={handleGoogleSign} variant="primary" className="me-2"><i class="fab fa-google"></i> Google sign in</Button>
-                              <Button onClick={handleGithubSign} variant="primary"><i class="fab fa-github"></i> Github Sign in</Button>
+                              <Button onClick={handleGoogleSign} variant="primary" className="me-2 p-2 mb-2"><i class="fab fa-google"></i> Google sign in</Button>
+                              <Button onClick={handleGithubSign} className="me-2 p-2 mb-2" variant="primary"><i class="fab fa-github"></i> Github Sign in</Button>
                          </Col>
                     </Row>
                </div>

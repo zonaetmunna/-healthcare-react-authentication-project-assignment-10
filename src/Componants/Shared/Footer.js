@@ -3,8 +3,11 @@ import { Col, Container, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
+     const styles = {
+          fontFamily: 'Roboto Mono'
+     }
      return (
-          <div className="bg-dark text-white text-center mt-5 ">
+          <div style={styles} className="bg-dark text-white text-center mt-5 ">
                <Container className="">
                     <Row className="g-4 ">
                          <Col sm={12} md={4} className="p-3">

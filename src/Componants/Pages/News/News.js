@@ -8,8 +8,11 @@ import five from "../../../imgaes/news/5.png"
 import six from '../../../imgaes/news/6.jpg'
 
 const News = () => {
+     const styles = {
+          fontFamily: 'Roboto Mono'
+     }
      return (
-          <div className="mt-5 p-5  ">
+          <div style={styles} className="mt-5 p-5  ">
                <h1 className="text-center text-primary"><i class="far fa-newspaper"></i> Top News</h1>
                <Container>
                     <Row className="g-3  ">
