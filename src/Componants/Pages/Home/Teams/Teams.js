@@ -23,6 +23,7 @@ const Teams = () => {
                <Row xs={1} md={4} className="g-4">
                     {
                          member.map(team => <Team
+                              key={team.id}
                               team={team}
                          ></Team>)
                     }

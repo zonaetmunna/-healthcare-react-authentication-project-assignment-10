@@ -18,10 +18,10 @@ const Service = ({ service }) => {
           <div>
                <Col className="shadow-lg">
                     <Card>
-                         <Card.Img variant="top" src={image} fluid className="" width="250" height="250" />
+                         <Card.Img variant="top" src={image} className="" width="250" height="250" />
                          <Card.Body>
                               <Card.Title>{name}</Card.Title>
-                              <Card.Text>{description.slice(0, 100)}</Card.Text>
+                              <Card.Text>{description.slice(0, 150)}</Card.Text>
                               <Button onClick={handleDetailsClick} variant="success">Service Details</Button>
                          </Card.Body>
                     </Card>

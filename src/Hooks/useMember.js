@@ -2,11 +2,11 @@ import { useEffect, useState } from "react"
 
 
 const useMember = () => {
-     const [member, setmember] = useState([]);
+     const [member, setMember] = useState([]);
      useEffect(() => {
           fetch('/Member.json')
                .then(res => res.json())
-               .then(data => setmember(data))
+               .then(data => setMember(data))
      }, [])
 
      return [member];
