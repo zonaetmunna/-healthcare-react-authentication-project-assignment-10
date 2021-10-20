@@ -32,7 +32,7 @@ const Details = () => {
      }
 
      return (
-          <div className="mt-5">
+          <div className="mt-5 pt-3">
 
                <Container className="m-3 p-3 w-75 mx-auto bg-light">
                     <Row>
