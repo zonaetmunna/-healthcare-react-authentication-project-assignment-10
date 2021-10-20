@@ -4,7 +4,7 @@ const useService = () => {
      const [services, setServices] = useState([])
 
      useEffect(() => {
-          fetch('/Health-data.json')
+          fetch('/Service.json')
                .then(res => res.json())
                .then(data => setServices(data))
      }, [])
