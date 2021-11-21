@@ -7,4 +7,4 @@ this site is mostly useful for medical services
 * we used firebase authentication system
 * react bootstrap component use
 * it is full medical services site
-* all people 
+
