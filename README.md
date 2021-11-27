@@ -3,8 +3,10 @@
 our live site link with (https://medical-and-health-auth.firebaseapp.com/home).
 this site is mostly useful for medical services
 
-* this site is build by react.js framework
-* we used firebase authentication system
-* react bootstrap component use
-* it is full medical services site
+* The project has been designed using only front-end technology-based.
+* If the user clicks on any service then full details will be shown.
+* Users will have to login for a service and be redirected to an appointment.
+* A user will be able to see his appointment, news medicine details.
+* The technology is used to   react ,react-bootstrap ,react-router ,firebase-    authentication  systems.
+
 
